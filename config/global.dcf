@@ -7,7 +7,7 @@ data_loading_header: TRUE
 data_ignore:
 load_libraries: TRUE
 libraries: checkpoint, corrplot, d3heatmap, dataMeta, data.table, devtools, dplyr, DT, dygraphs, ezknitr, FactoMineR, factoextra, 
-            flexdashboard, flextable, formatR, formattable, futile.logger, ggplot2, ggpubr, gt, here, highcharter, janitor, knitr, 
+            flexdashboard, flextable, formatR, formattable, futile.logger, gplots, ggplot2, ggpubr, gt, here, highcharter, janitor, knitr, 
             lintr, lubridate, magrittr, openxlsx, pacman, packagefinder, pdftools, pivottabler, plyr, ProjectTemplate, readr, readxl, 
             reprex, reshape2, rio, rmarkdown, RVerbalExpressions, shiny, shinydashboard, shinyWidgets, stringr, styler, tidyverse, 
             treemap, tryCatchLog, utils, xlsx, xtable, zoo

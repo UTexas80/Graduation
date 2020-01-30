@@ -13,8 +13,11 @@ dirCheck(mainDir, subDir)
 ################################################################################
 ## Step 00.02: clean dataframes with Janitor                                 ###
 ################################################################################
- dt_graduation <- graduation[,c(7,8,22, 50,51, 52, 59, 68, 76, 77) ]
- dt_graduation <- dt_graduation %>% mutate_if(is.character,as.factor)
+graduation[, `:=`(c(7, 8, 22, 50, 51, 52, 59, 68, 76, 77), 
+            lapply(.SD,   as.factor)),
+            .SDcols = c(7, 8, 22, 50, 51, 52, 59, 68, 76,   77)]
+dt_graduation <- graduation[,c(7,8,22, 50,51, 52, 59, 68, 76, 77) ]
+dt_graduation <- dt_graduation %>% mutate_if(is.character,as.factor)
 ################################################################################
 ## Step 00.99: VERSION HISTORY                                               ###
 ################################################################################
