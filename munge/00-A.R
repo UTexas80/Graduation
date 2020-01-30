@@ -15,7 +15,10 @@ dirCheck(mainDir, subDir)
 ################################################################################
 graduation[, `:=`(c(7, 8, 22, 50, 51, 52, 59, 68, 76, 77), 
             lapply(.SD,   as.factor)),
-            .SDcols = c(7, 8, 22, 50, 51, 52, 59, 68, 76,   77)]
+            .SDcols = c(7, 8, 22, 50, 51, 52, 59, 68, 76, 77)]
+graduation <- graduation %>% mutate_if(is.character,as.factor)
+graduation[ is.na(graduation) ] <- 0
+graduation <- graduation %>% mutate_if(is.numeric,as.integer)
 dt_graduation <- graduation[,c(7,8,22, 50,51, 52, 59, 68, 76, 77) ]
 dt_graduation <- dt_graduation %>% mutate_if(is.character,as.factor)
 ################################################################################
